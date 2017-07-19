@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_color">
+
+
+    <Button
+        android:id="@+id/search_button"
+        style="@style/search_button" />
+
+    <ListView
+        android:id="@+id/list"
+        style="@style/list"
+        android:layout_below="@id/search_button" />
+
+
+    <TextView
+        android:id="@+id/empty_view"
+        style="@style/empty_text"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

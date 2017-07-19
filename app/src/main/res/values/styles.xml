@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="image_view">
+        <item name="android:layout_height">@dimen/image_height</item>
+        <item name="android:layout_width">@dimen/image_width</item>
+        <item name="android:layout_marginBottom">@dimen/vertical_margin</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/item_margin</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="list_items_title">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">@dimen/item_margin</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <style name="list_items_author">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">@dimen/item_margin</item>
+        <item name="android:textSize">@dimen/author_text_size</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textColorHint">@color/text_color</item>
+        <item name="android:hint">@string/editText_hint</item>
+    </style>
+
+    <style name="search_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
+        <item name="android:text">@string/button_text</item>
+    </style>
+
+    <style name="list">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:divider">@color/colorAccent</item>
+        <item name="android:dividerHeight">@dimen/divider_height</item>
+    </style>
+
+    <style name="empty_text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+
+    <string name="button_text">Search</string>
+    <string name="editText_hint">Search articles</string>
+</resources>
