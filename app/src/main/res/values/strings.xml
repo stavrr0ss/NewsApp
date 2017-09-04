@@ -1,9 +1,27 @@
 <resources>
     <string name="app_name">NewsApp</string>
-    <string name="search_news">Search news</string>
+    <string name="button_text">Update</string>
     <string name="no_internet">No internet connection</string>
     <string name="no_articles">No articles found </string>
     <string name="settings_title">Article Settings</string>
     <string name="settings_menu_item">Settings</string>
+
+    <string name="settings_list_size_label">List size</string>
+    <string name="settings_list_size_key" translatable="false">page-size</string>
+    <string name="settings_list_size_default" translatable="false">10</string>
+
+    <string name="settings_query_label">Query</string>
+    <string name="settings_query_default" translatable="false">@string/query_economics</string>
+    <string name="settings_query_key" translatable="false">query</string>
+
+    <string name="query_sports">Sport</string>
+    <string name="query_politics">Politics</string>
+    <string name="query_music">Music</string>
+    <string name="query_books">Books</string>
+    <string name="query_movies">Movies</string>
+    <string name="query_economics">Economics</string>
+    <string name="query_health">Health</string>
+    <string name="query_energy">Energy</string>
+    <string name="query_environment">Environment</string>
 
 </resources>

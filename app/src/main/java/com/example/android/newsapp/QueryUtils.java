@@ -25,11 +25,10 @@ import java.util.List;
 public final class QueryUtils {
 
     private static final String LOG_TAG = QueryUtils.class.getSimpleName();
-    private QueryUtils(){
 
-    }
+    private QueryUtils() {}
 
-    public static List<News> fetchNews( String requestUrl){
+    public static List<News> fetchNews(String requestUrl) {
         URL url = creatUrl(requestUrl);
         String jsonResponse = null;
         try {
@@ -41,17 +40,17 @@ public final class QueryUtils {
         return news;
     }
 
-    private static URL creatUrl(String stringUrl){
+    private static URL creatUrl(String stringUrl) {
         URL url = null;
-        try{
+        try {
             url = new URL(stringUrl);
-        }catch (MalformedURLException e){
-            Log.e(LOG_TAG,"Problem with creating URL", e);
+        } catch (MalformedURLException e) {
+            Log.e(LOG_TAG, "Problem with creating URL", e);
         }
         return url;
     }
 
-    private static String makeHttpRequest(URL url)throws IOException{
+    private static String makeHttpRequest(URL url) throws IOException {
         String jsonResponse = "";
         if (url == null) {
             return jsonResponse;
@@ -98,8 +97,8 @@ public final class QueryUtils {
         return output.toString();
     }
 
-    private static List<News> extractFeaturesFromJson(String newsJson){
-        if (TextUtils.isEmpty(newsJson)){
+    private static List<News> extractFeaturesFromJson(String newsJson) {
+        if (TextUtils.isEmpty(newsJson)) {
             return null;
         }
         List<News> news = new ArrayList<>();
@@ -108,7 +107,7 @@ public final class QueryUtils {
             JSONObject results = baseJsonResponse.getJSONObject("response");
 
             JSONArray articlesArray = results.getJSONArray("results");
-            for (int i = 0; i<articlesArray.length(); i++){
+            for (int i = 0; i < articlesArray.length(); i++) {
 
                 JSONObject currentArticle = articlesArray.getJSONObject(i);
 
@@ -116,13 +115,11 @@ public final class QueryUtils {
                 String section = currentArticle.getString("sectionName");
                 String url = currentArticle.getString("webUrl");
 
-                News articles = new News(title,section,url);
+                News articles = new News(title, section, url);
                 news.add(articles);
-                Log.v(LOG_TAG , "Json response "+ title + section + url);
-
             }
-        }catch (JSONException e){
-            Log.e(LOG_TAG, " Problem parsing the Json response .", e);
+        } catch (JSONException e) {
+            Log.e(LOG_TAG, "Problem parsing the Json response .", e);
         }
         return news;
     }
