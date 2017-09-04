@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sections">
+        <item>@string/query_sports</item>
+        <item>@string/query_politics</item>
+        <item>@string/query_music</item>
+        <item>@string/query_books</item>
+        <item>@string/query_movies</item>
+        <item>@string/query_economics</item>
+        <item>@string/query_health</item>
+        <item>@string/query_energy</item>
+        <item>@string/query_environment</item>
+    </string-array>
+</resources>
